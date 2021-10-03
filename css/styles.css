@@ -165,16 +165,6 @@ ul {
   margin-right: 10px;
 }
 
-.contact-icon.mail {
-  width: 16px;
-  height: 12px;
-}
-
-.contact-icon.tel {
-  width: 10px;
-  height: 16px;
-}
-
 .contact-link:hover .contact-icon,
 .contact-link:focus .contact-icon {
   fill: var(--accent-color);
@@ -193,7 +183,7 @@ ul {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../css/images/hero-image.jpg");
+    url("../images/hero-image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -300,19 +290,19 @@ ul {
 }
 
 .icon-antenna::before {
-  background-image: url(./images/icons/antenna.svg);
+  background-image: url(../images/antenna.svg);
 }
 
 .icon-clock::before {
-  background-image: url(./images/icons/clock.svg);
+  background-image: url(../images/clock.svg);
 }
 
 .icon-diagram::before {
-  background-image: url(./images/icons/diagram.svg);
+  background-image: url(../images/diagram.svg);
 }
 
 .icon-astronaut::before {
-  background-image: url(./images/icons/astronaut.svg);
+  background-image: url(../images/astronaut.svg);
 }
 
 .feature-item {
@@ -407,11 +397,6 @@ ul {
   border-radius: 50%;
 }
 
-.social-icon {
-  width: var(--portfolio-address-margin);
-  height: var(--portfolio-address-margin);
-}
-
 .social-link.member {
   background-color: var(--primary-bg-color);
 }
@@ -469,8 +454,6 @@ ul {
 }
 
 .client-icon {
-  width: 106px;
-  height: 60px;
   fill: var(--team-social-icon-color);
 }
 
@@ -512,6 +495,8 @@ ul {
 .filter-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
