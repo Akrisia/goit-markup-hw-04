@@ -14,8 +14,10 @@
   --team-social-icon-color: #afb1b8;
   --main-margin: 30px;
   --secondary-margin: 50px;
-  --portfolio-address-margin: 20px;
+  --main-title-size: 16px;
+  --main-text-size: 14px;
   --small-margin: 10px;
+  --main-border-radius: 4px;
 }
 
 body {
@@ -138,7 +140,7 @@ ul {
   padding-bottom: 32px;
 
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--main-text-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -162,7 +164,7 @@ ul {
 
 .contact-icon {
   fill: var(--primary-text-color);
-  margin-right: 10px;
+  margin-right: var(--small-margin);
 }
 
 .contact-link:hover .contact-icon,
@@ -217,7 +219,7 @@ ul {
 
   font-family: inherit;
   font-weight: 700;
-  font-size: 16px;
+  font-size: var(--main-title-size);
   line-height: 1.87;
   letter-spacing: 0.06em;
 
@@ -225,7 +227,7 @@ ul {
   background-color: var(--accent-color);
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: var(--main-border-radius);
 
   cursor: pointer;
 }
@@ -251,7 +253,7 @@ ul {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: var(--secondary-margin);
 
   font-weight: 700;
   font-size: 36px;
@@ -261,7 +263,7 @@ ul {
 .feature-title,
 .footer-social-title {
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--main-text-size);
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -277,37 +279,20 @@ ul {
   margin-left: calc(-1 * var(--main-margin));
 }
 
-.feature-item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-  background-position: center;
-  background-color: var(--secondary-bg-color);
-  border-radius: 4px;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-}
-
 .feature-item {
   flex-basis: calc(100% / 4 - var(--main-margin));
   margin-left: var(--main-margin);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  border-radius: var(--main-border-radius);
+
+  margin-bottom: var(--main-margin);
 }
 
 .feature-title {
@@ -315,7 +300,7 @@ ul {
 }
 
 .feature-desc {
-  font-size: 14px;
+  font-size: var(--main-text-size);
   line-height: 1.71;
 }
 
@@ -353,13 +338,13 @@ ul {
 }
 
 .member-content {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);
 }
 
 .member-title,
 .member-desc {
-  font-size: 16px;
+  font-size: var(--main-title-size);
   line-height: 1.19;
 }
 
@@ -385,7 +370,7 @@ ul {
 }
 
 .social-item:not(:first-child) {
-  margin-left: 10px;
+  margin-left: var(--small-margin);
 }
 
 .social-link {
@@ -435,7 +420,7 @@ ul {
 }
 
 .client-item:not(:first-child) {
-  margin-left: 30px;
+  margin-left: var(--main-margin);
 }
 
 .client-link {
@@ -445,7 +430,7 @@ ul {
   width: 100%;
   height: 100%;
   border: 1px solid var(--team-social-icon-color);
-  border-radius: 4px;
+  border-radius: var(--main-border-radius);
 }
 
 .client-link:hover,
@@ -479,14 +464,14 @@ ul {
 
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--main-title-size);
   line-height: 1.62;
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: var(--main-border-radius);
 
   cursor: pointer;
 }
@@ -513,8 +498,12 @@ ul {
   margin-left: var(--main-margin);
 }
 
-.project-item:hover,
-.project-item:focus {
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -538,7 +527,7 @@ ul {
 }
 
 .project-desc {
-  font-size: 16px;
+  font-size: var(--main-title-size);
   line-height: 1.87;
 
   color: var(--primary-text-color);
@@ -563,12 +552,12 @@ footer {
 }
 
 .address {
-  margin-top: var(--portfolio-address-margin);
+  margin-top: 20px;
 }
 
 .address-list {
   font-style: normal;
-  font-size: 14px;
+  font-size: var(--main-text-size);
   line-height: 1.71;
 }
 
@@ -585,6 +574,6 @@ footer {
 }
 
 .footer-social-title {
-  margin-bottom: var(--portfolio-address-margin);
+  margin-bottom: 20px;
   color: var(--primary-bg-color);
 }
