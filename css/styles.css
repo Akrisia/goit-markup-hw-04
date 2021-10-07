@@ -338,8 +338,8 @@ ul {
 }
 
 .member-content {
-  margin-top: var(--main-margin);
-  margin-bottom: var(--main-margin);
+  padding-top: var(--main-margin);
+  padding-bottom: var(--main-margin);
 }
 
 .member-title,
